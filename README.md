@@ -9,7 +9,7 @@ It simulates the following system
 ![My image](https://github.com/kperkins411/PY_schedule_dispatch/blob/master/queues.jpg)
 
 And generates a plot showing how each process would be scheduled on a single CPU
-![My image](https://github.com/kperkins411/PY_schedule_dispatch/blob/master/cputime.jpg)
+![My image](https://github.com/kperkins411/PY_schedule_dispatch/blob/master/scatterplot.jpg)
 
 Jobs to run are stored in a file that consists of rows with 4 numbers each, like so
   2,5,4 ,0
