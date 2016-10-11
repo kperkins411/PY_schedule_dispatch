@@ -1,0 +1,46 @@
+# interrupt codes
+SWITCH_PROCESS = 1
+IO_COMPLETE = 0
+
+# SUCCESS CODES
+SUCCESS = 0
+ADD_JOB_TO_DISPATCHER = SUCCESS + 10
+WAITING_TO_ADD_JOB_TO_DISPATCHER = SUCCESS + 9
+PCB_BLOCKED_QUEUE_EMPTY = SUCCESS + 8
+PCB_MOVED_FROM_READY_TO_RUNNING = SUCCESS + 7
+PCB_MOVED_FROM_BLOCKED_TO_READY = SUCCESS + 6
+PCB_ADDED_TO_BLOCKED_QUEUE = SUCCESS + 5
+PCB_SWITCHED_PROCESSES = SUCCESS + 4
+PCB_FINISHED = SUCCESS + 3
+PCB_CPUTIME_DECREMENTED = SUCCESS + 2
+PCB_SCHEDULED = SUCCESS + 1
+PCB_UNIMPLEMENTED = SUCCESS - 1
+
+# FAILURE CODES
+FAIL = SUCCESS - 1
+USER_CHOSE_TO_EXIT = SUCCESS - 2
+COULD_NOT_OPEN_FILE = SUCCESS - 3
+COULD_NOT_READ_FILE = SUCCESS - 4
+UNINITIALIZED = SUCCESS - 5
+UNIMPLEMENTED = SUCCESS - 6
+NO_JOBS = SUCCESS - 7
+BLOCKED_JOBS = SUCCESS - 8
+
+CHAR_TO_SEARCH_FOR = ','
+
+TIMER_BEGIN = -1
+
+# default files
+SOURCE_FILE = "../testdata.txt"
+LOG_FILE = "results.txt"
+LOGGER_TEST = "logger_test.txt"
+DEFAULT_PCB_FILE = "pcb.txt"
+
+
+class PCB(object):
+    def __init__(self, process_number=UNINITIALIZED, start_time=UNINITIALIZED, cpu_time=UNINITIALIZED,
+                 io_time=UNINITIALIZED):
+        self.process_number = int(process_number)
+        self.start_time = int(start_time)
+        self.cpu_time = int(cpu_time)
+        self.io_time = int(io_time)
