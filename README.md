@@ -1,7 +1,7 @@
 # PY_schedule_dispatch
 A python implementation of a simple round robin scheduler with blocking queue and interrupts (time slicing and IO)
-It is not threaded,the interrupts are sequential at times specified in app.main
-
+It is not threaded,the interrupts are sequential at times specified in app.main.  This is a python implementation of a C++ assignment that I gave.
+![My image](https://github.com/kperkins411/PY_schedule_dispatch/blob/master/queues.jpg)
 
 Joblist uses File_IO to load a list of jobs from the default jobs file (defined in constants.DEFAULT_PCB_FILE)
 The file consists of rows of 4 numbers like so
